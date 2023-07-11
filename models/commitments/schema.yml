@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: slots_per_second
+    description: |
+      This table is showing the amount of slots used for each second slots where used.
+    columns:
+      - name: ts
+        description: "The timestamp at a granularity of the second."
+        tests:
+          - unique
+          - not_null
+      - name: slots
+        description: "The amount of slots used for the given second."
+
+
+  - name: slot_coverage
+    description: |
+      This table is showing the percent of seconds that different 
+      slot limits have been met or exceeded.
