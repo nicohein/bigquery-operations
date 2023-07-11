@@ -4,6 +4,10 @@ models:
   - name: slots_per_second
     description: |
       This table is showing the amount of slots used for each second slots where used.
+    config:
+      persist_docs:
+        relation: true
+        columns: true
     columns:
       - name: ts
         description: "The timestamp at a granularity of the second."
@@ -18,3 +22,7 @@ models:
     description: |
       This table is showing the percent of seconds that different 
       slot limits have been met or exceeded.
+    config:
+      persist_docs:
+        relation: true
+        columns: true

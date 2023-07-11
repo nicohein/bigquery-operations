@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: billing_model_by_dataset
+    description: |
+      This table is showing the storage cost for each dataset for both billing models, logical and physical.
+      For the physical billing, it is further distinguished between with and without timetravel.
+    config:
+      persist_docs:
+        relation: true
+        columns: true

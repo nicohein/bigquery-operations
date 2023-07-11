@@ -13,7 +13,7 @@ slots_usage AS (
             TIMESTAMP_ADD(end_time, INTERVAL 1 SECOND), SECOND
         ) AS end_time
     FROM
-        `{{ env_var('DBT_BIGQUERY_PROJECT') }}`.`region-EU`.INFORMATION_SCHEMA.JOBS_BY_ORGANIZATION
+        `{{ env_var('DBT_BIGQUERY_PROJECT') }}`.`region-EU`.INFORMATION_SCHEMA.JOBS_BY_ORGANIZATION -- noqa: CP02
     -- change your region here
     WHERE
         -- taking the last 7 complete days
